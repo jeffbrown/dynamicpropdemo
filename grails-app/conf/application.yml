@@ -2,10 +2,6 @@
 something:
     else: Moving Pictures
 ---
-spring:
-    profiles:
-        active: ${WAS_ENV:development}
----
 grails:
     profile: web
     codegen:
@@ -21,6 +17,8 @@ info:
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
 spring:
+    profiles:
+        active: ${WAS_ENV:development}
     main:
         banner-mode: "off"
     groovy:
